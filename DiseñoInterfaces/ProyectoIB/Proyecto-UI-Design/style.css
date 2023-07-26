@@ -1,0 +1,611 @@
+@import url(https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&display=swap);
+
+* {
+    margin: 0;   
+    font-family: 'Dosis', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+  --bg-color: #f1f2eb;
+  --second-color: #d8dad3;
+  --main-color: #a4c2a5;
+  --second-bg-color: #566246;
+  --textcolor: #4a4a48;
+}
+
+body{
+  background-image: url("assets/10690486_4477486.png");
+  background-size: cover;
+  align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
+
+.header{
+  background-color: #bad6ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  border-radius: 0 0 45px 45px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  z-index: 2;
+}
+
+.header .logo{
+  cursor: pointer;
+}
+
+.header .logo img{
+  height: 50px;
+  width: auto;
+  transition: .5s ease-in;
+}
+
+.header .logo img:hover{
+  transform: scale(1.2);
+}
+
+.header .navbar ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .navbar ul li:hover{
+  transform: scale(1.1);
+}
+
+.header .navbar ul li a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--textcolor);
+  font-family: "Coolvetica", sans-serif;
+  transition: .5s;
+}
+
+/*Indicador*/
+.navbar ul li a:hover, .navbar ul li a:active{
+  color: white;
+  transform: scale(1.01);
+}
+
+
+/*Boton de tienda*/
+.btn {
+  background-color: #9aaf9b;
+  border: .5px solid var(--second-bg-color);
+  padding: 6px;
+  position: relative;
+  width: 7.2rem;
+  height: 2em;
+  transition: 0.5s ease-in-out;
+  font-size: 17px;
+  border-radius: 0.8em;
+  cursor: pointer;
+}
+
+.btn p {
+  position: absolute;
+  top: 0.4em;
+  left: 1.5em;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+  color: white;
+  font-family: "Coolvetica";
+}
+
+.btn svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff;
+}
+
+.btn:hover p {
+  left: 0.6em;
+  color: #fff
+}
+
+.btn:hover svg {
+  opacity: 1;
+}
+
+.btn:hover {
+  background-color: var(--second-bg-color);
+}
+
+/*Body Styles - Home*/
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.home-content h3{
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.home-content h2{
+  font-size: 2.9rem;
+  font-weight: 800;
+}
+
+span{
+  color: var(--main-color);
+}
+
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem;
+}
+
+.home-content h1{
+  font-family: "Coolvetica";
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #566246;
+}
+
+.home-content{
+  min-height:100px;
+  margin-left: 80px;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.home-content p{
+  margin-top: 20px;
+  line-height: 2;
+}
+
+.home-img{
+  min-height:100px;
+  margin-left: 20px;
+  margin-right: 80px;
+  padding: 20px;
+}
+
+.img1{
+  position: relative;
+  overflow: auto;
+  width: 625px;
+  left: 12%;
+  top: 5%;
+}
+
+.card-home {
+  width: 850px;
+  height: 400px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+  z-index: -1;
+  margin-left: 20px;
+  margin-right: -20px;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card-home:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(#566246, #9aaf9b);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/*About Section Styles*/
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 90%;
+  height: 700px;
+  background-color: #b1c5b2;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 25px;
+  box-shadow:  0 0 15px 5px rgba(0,0,0,0.2);
+}
+
+.title{
+  font-family: "Coolvetica", sans-serif;
+  font-weight: bolder;
+  font-size: 1.7rem;
+  background-color: #7a8768;
+  color: var(--bg-color);
+  padding: 20px;
+  margin-top: -700px;
+  margin-left: 50px;
+  border-radius: 20px 5px 20px 5px; 
+  z-index: 0;
+  transition: .3s ease-in;
+}
+
+.title:hover{
+  transform: scale(1.01) rotate(-5deg);
+}
+
+.card1 {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: linear-gradient(-45deg,#566246 0%, #a4c2a5 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-left: -210px;
+  margin-right: 50px;
+}
+
+.card1 svg {
+  object-fit: cover;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card1:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card1:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card1:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+.card2 {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background: linear-gradient(-45deg,#566246 0%, #a4c2a5 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.card2 img {
+  object-fit: cover;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card2:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card2:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  font-family: "Coolvetica", sans-serif;
+  font-size: 2rem;
+}
+
+.card__description1{
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.card2:hover img {
+  scale: 0;
+  transform: rotate(45deg);
+}
+
+.card2 ul li{
+  font-size: 1.3rem;
+  margin-left: 30px;
+  line-height: 1.4;
+  margin-right: 10px;
+  text-align: justify;
+  margin-top: 25px;
+}
+
+/*Partners - Slider Style*/
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-150px * 7))}
+}
+
+.container {
+  display: inline-flex;
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+
+	&::before,
+	&::after {
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.item{
+    animation: scroll 30s linear infinite;
+		padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	}
+	
+	.container .item img {
+		width: auto;
+    height: 90px;
+	}
+
+  /*Services Styles*/
+  .services{
+    display: inline-flexbox;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 700px;
+    margin-bottom: 20px;
+  }
+
+  .services-title{
+    font-family: "Coolvetica", sans-serif;
+    font-size: 1.7rem;
+    background-color: #a4c2a5;
+    border-radius: 5px 20px 5px 20px;
+    padding: 10px 25px;
+    color: white;
+    box-shadow: 19px 17px 35px -11px rgba(0, 0, 0, 0.60);
+    margin-top: 100px;
+    width: 20%;
+    margin-left: 46%;
+  }
+
+  .products{
+   display: inline-flex;
+   width: 174vh;
+   height: 500px;
+   margin-top: 50px;
+   margin-left: 100px;
+   color: #4a4a48;
+  }
+
+  /*Products styles*/
+  .card-1 {
+    height: auto;
+    width: 500px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+    margin-left: 5px;
+  }
+  
+   /*Image*/
+  .cnew-image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: linear-gradient(to top, #566246,#9aaf9b);
+  }
+  
+  /*Description */
+  .cnew-description {
+    line-height: 2;
+    display: flex;
+    position: absolute;
+    gap: .5em;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    color: #212121;
+    height: 50%;
+    bottom: 0;
+    border-radius: 16px;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+  }
+  
+  /*Text*/
+  .ctext-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .ctext-body {
+    font-size: 1rem;
+    line-height: 130%;
+  }
+  
+  /* Hover states */
+  .card-1:hover .cnew-description {
+    transform: translateY(100%);
+  }
+  
+  .card-2 {
+    height: auto;
+    width: 500px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+    margin-left: 30px;
+  }
+
+  .card-2:hover .cnew-description {
+    transform: translateY(100%);
+  }
+
+  .card-3 {
+    height: auto;
+    width: 500px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+    margin-left: 30px;
+  }
+  
+  .card-3:hover .cnew-description {
+    transform: translateY(100%);
+  }
+
+  
+  .card-4 {
+    height: auto;
+    width: 500px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #d0d0d0;
+    overflow: hidden;
+    margin-left: 30px;
+  }
+  
+  .card-4:hover .cnew-description {
+    transform: translateY(100%);
+  }
+  
+  /*Encuentranos*/
+  .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 90%;
+    height: 700px;
+    background-color: #b1c5b2;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 25px;
+    box-shadow:  0 0 15px 5px rgba(0,0,0,0.2);
+  }
+
+  .title2{
+    font-family: "Coolvetica", sans-serif;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    background-color: #7a8768;
+    color: var(--bg-color);
+    padding: 20px;
+    margin-top: -700px;
+    margin-left: 50px;
+    border-radius: 20px 5px 20px 5px; 
+    z-index: 0;
+    transition: .3s ease-in;
+  }
+  
+  
